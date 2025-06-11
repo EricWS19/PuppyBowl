@@ -2,20 +2,23 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Puppy Bowl Roster</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Puppy Bowl</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1>Puppy Bowl 2025</h1>
-  <main id="puppy-list"></main>
-  <section id="puppy-details"></section>
+  <h1>Puppy Bowl Roster</h1>
+
+  <div id="puppy-container"></div>
+
   <form id="add-puppy-form">
-    <input type="text" name="name" placeholder="Puppy Name" required />
-    <input type="text" name="breed" placeholder="Breed" required />
-    <input type="url" name="imageUrl" placeholder="Image URL" required />
+    <h2>Add a New Puppy</h2>
+    <input type="text" id="puppy-name" placeholder="Name" required />
+    <input type="text" id="puppy-breed" placeholder="Breed" required />
+    <input type="text" id="puppy-image" placeholder="Image URL" required />
     <button type="submit">Add Puppy</button>
   </form>
-  <script src="app.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>

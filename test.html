@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Test DOM Injection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 2rem;
+    }
+    #puppy-details {
+      border: 2px solid red;
+      padding: 1rem;
+      background: #ffffdd;
+    }
+  </style>
+</head>
+<body>
+  <h1>Test DOM Injection</h1>
+  <button id="test-btn">Inject Puppy Details</button>
+
+  <section id="puppy-details"></section>
+
+  <script>
+    const puppy = {
+      id: 36221,
+      name: "Daphne",
+      breed: "German Shepherd",
+      status: "field",
+      imageUrl: "http://r.ddmcdn.com/w_960/s_f/o_1/cx_25/cy_0/cw_960/ch_1440/APL/uploads/2020/01/Daphne-PBXVI.jpg",
+      team: { name: "Ruff" }
+    };
+
+    document.getElementById("test-btn").addEventListener("click", () => {
+      const el = document.getElementById("puppy-details");
+      el.innerHTML = `
+        <h2>${puppy.name}</h2>
+        <img src="${puppy.imageUrl}" style="width:200px; border-radius: 8px;" />
+        <p><strong>Breed:</strong> ${puppy.breed}</p>
+        <p><strong>Status:</strong> ${puppy.status}</p>
+        <p><strong>Team:</strong> ${puppy.team.name}</p>
+      `;
+    });
+  </script>
+</body>
+</html>

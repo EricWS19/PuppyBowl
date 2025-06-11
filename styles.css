@@ -61,6 +61,24 @@ form button {
   max-width: 400px;
 }
 
+#single-puppy-details {
+  background-color: #fefefe;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px auto;
+  width: 300px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+#single-puppy-details img {
+  border-radius: 8px;
+  width: 200px;
+  height: auto;
+  margin-top: 10px;
+}
+
 
 form button:hover {
   background-color: #005fa3;

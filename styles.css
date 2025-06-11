@@ -52,6 +52,16 @@ form button {
   cursor: pointer;
 }
 
+#single-puppy-details {
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  background: #ffffff;
+  max-width: 400px;
+}
+
+
 form button:hover {
   background-color: #005fa3;
 }

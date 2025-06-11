@@ -23,7 +23,19 @@ document.addEventListener("DOMContentLoaded", () => {
         <h3>${puppy.name}</h3>
         <p>Breed: ${puppy.breed}</p>
         <img src="${puppy.imageUrl}" alt="${puppy.name}" width="150" />
+         <button class="delete-button" data-id="${puppy.id}">Remove</button>
+         
       `;
+card.querySelector(".delete-button").addEventListener("click", async () => {
+  try {
+    await fetch(`${baseUrl}/${puppy.id}`, {
+      method: "DELETE"
+    });
+    fetchAllPuppies(); // refresh the list
+  } catch (err) {
+    console.error("Failed to delete puppy:", err);
+  }
+});
 
       card.addEventListener("click", () => fetchSinglePuppy(puppy.id));
       container.appendChild(card);

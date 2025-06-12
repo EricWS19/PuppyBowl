@@ -66,7 +66,7 @@ function renderPuppies(puppies) {
 function renderSinglePuppy(puppy) {
   const detailsContainer = document.getElementById("single-puppy-details");
 
-  console.log("🐶 Rendering single puppy:", puppy); // helps you verify it's being triggered
+  console.log("🐶 Rendering single puppy:", puppy); 
 
   detailsContainer.innerHTML = `
     <div class="puppy-detail-card">
